@@ -58,7 +58,7 @@ def after_request(response):
     response.headers[
         'Access-Control-Allow-Headers'] = 'Authorization, Content-Type'
     response.headers[
-        'Access-Control-Allow-Methods'] = 'OPTIONS, GET, PUT, POST'
+        'Access-Control-Allow-Methods'] = 'OPTIONS, GET, PUT, POST, DELETE,PATCH'
     response.headers['X-XSS-Protection'] = 1
     response.headers['mode'] = 'block'
     response.headers['X-Frame-Options'] = 'SAMEORIGIN'

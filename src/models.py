@@ -59,3 +59,8 @@ class Person(db.Model):
     birth_date = db.Column(db.Date, nullable=False)
     address = db.Column(db.String(128), nullable=False)
     level = db.Column(db.Integer,nullable=True)
+    
+    def create(self):
+      db.session.add(self)
+      db.session.commit()
+      return self
